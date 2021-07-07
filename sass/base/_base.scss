@@ -20,3 +20,9 @@ html {
     //    font-size: 75%; //1 rem = 12px; 12/16=
     // }
 }
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.9;
+    background-color: var(--color-primary);
+}
