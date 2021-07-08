@@ -5,6 +5,8 @@
     justify-content: space-evenly;
     align-items: center;
 
+    overflow: hidden;
+
     &__logo {
         height: 5rem;
         width: 5rem;
@@ -18,6 +20,35 @@
     &__link {
         display: inline-block;
         padding: 1rem 2rem;
+
+        transform-style: preserve-3d;
+        transition: all 0.5s;
+
+        position: relative;
+        // perspective: 100rem;
+    }
+
+    &__link::after {
+        content: attr(data-text);
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        place-items: center;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background-color: var(--color-tertiary);
+
+        transform-origin: top;
+        transform: rotateX(90deg);
+        transition: all 0.3s;
+    }
+
+    &__link:hover,
+    &__link:visited {
+        transform-origin: top;
+        transform: rotateX(-90deg);
     }
 
     &__dark-mode-toggle {
@@ -26,9 +57,57 @@
         place-items: center;
 
         &__toggle {
-            width: 4rem;
+            width: 6rem;
             height: 2rem;
-            background-color: var(--color-secondary);
+            background-color: var(--color-tertiary);
+            border-radius: 10rem;
+            position: relative;
+            border: 1px solid var(--color-secondary);
+        }
+
+        &__toggle::before,
+        &__toggle::after {
+            content: "";
+            position: absolute;
+            background-color: var(--color-quinary);
+            height: 1.6rem;
+            width: 1.6rem;
+            border-radius: 100%;
+        }
+
+        &__toggle::before {
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+        }
+        &__toggle::after {
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+        }
+
+        &__checkbox {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 10rem;
+            display: inline-block;
+            cursor: pointer;
+
+            transform: scaleX(3);
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        &__checkbox:checked ~ &__toggle::after {
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+        &__checkbox:checked ~ &__toggle::before {
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }
