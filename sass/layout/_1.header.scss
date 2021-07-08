@@ -1,12 +1,58 @@
 .header {
     grid-column: container-start / container-end;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    &__checkbox {
+        height: 4rem;
+        width: 4rem;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1;
+    }
+    // Hamburger Lines
+    &__hamburger {
+        height: 4rem;
+        width: 4rem;
+        background-color: royalblue;
+        display: grid;
+        place-items: center;
 
-    overflow: hidden;
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+    }
 
+    &__hamburger div {
+        height: 2px;
+        width: 3rem;
+        background-color: var(--color-quinary);
+
+        position: relative;
+    }
+
+    &__hamburger div::before,
+    &__hamburger div::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-quinary);
+    }
+    &__hamburger div::before {
+        top: -1rem;
+    }
+    &__hamburger div::after {
+        bottom: -1rem;
+    }
+
+    // Nav Bar
+    &__nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        overflow: hidden;
+    }
     &__logo {
         height: 5rem;
         width: 5rem;
