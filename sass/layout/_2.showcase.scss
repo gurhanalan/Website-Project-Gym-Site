@@ -1,9 +1,62 @@
 .showcase {
     grid-column: container-start / container-end;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
     height: calc(100vh - 6rem);
+
+    background-image: linear-gradient(
+            var(--color-tertiary-m),
+            var(--color-tertiary-m)
+        ),
+        url(../img/showcase/showcase-bg.jpg);
+
+    @extend %background-styling;
 
     @include respond(tab-port) {
         height: 100vh;
+    }
+
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 6vh 4vw;
+
+    &__title {
+        font-size: $font-size-xlarge;
+        font-weight: $font-weight-light;
+        line-height: 1;
+        background-image: linear-gradient(
+            135deg,
+            var(--color-secondary),
+            var(--color-quinary)
+        );
+        background-clip: text;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__para {
+        color: var(--color-quinary);
+        font-size: $font-size-small;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__links {
+        display: flex;
+        gap: 2rem;
+    }
+    &__link {
+        display: inline-block;
+        padding: 0.7rem 2rem;
+        border-radius: 0.3rem;
+
+        &--1 {
+            background-color: var(--color-tertiary);
+        }
+
+        &--2 {
+            background-color: var(--color-secondary);
+        }
     }
 }

@@ -15,6 +15,11 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 1em = 16px
 
 */
+.showcase {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
 html {
   --color-primary: hsl(87, 98%, 34%);
   --color-primary-m: hsla(87, 100%, 45%, 0.55);
@@ -224,11 +229,41 @@ a:visited {
 
 .showcase {
   grid-column: container-start / container-end;
-  background-color: antiquewhite;
-  height: calc(100vh - 6rem); }
+  height: calc(100vh - 6rem);
+  background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(../img/showcase/showcase-bg.jpg);
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 6vh 4vw; }
   @media only screen and (max-width: 56.25em) {
     .showcase {
       height: 100vh; } }
+  .showcase__title {
+    font-size: calc(2.5rem + 5vw);
+    font-weight: 300;
+    line-height: 1;
+    background-image: linear-gradient(135deg, var(--color-secondary), var(--color-quinary));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .showcase__para {
+    color: var(--color-quinary);
+    font-size: calc(1.2rem + 0.5vw);
+    font-weight: 300;
+    text-align: center; }
+  .showcase__links {
+    display: flex;
+    gap: 2rem; }
+  .showcase__link {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    border-radius: 0.3rem; }
+    .showcase__link--1 {
+      background-color: var(--color-tertiary); }
+    .showcase__link--2 {
+      background-color: var(--color-secondary); }
 
 .motto {
   grid-column: container-start / container-end;
