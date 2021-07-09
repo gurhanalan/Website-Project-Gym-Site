@@ -1,4 +1,39 @@
 .motto {
     grid-column: container-start / container-end;
-    background-color: aquamarine;
+    padding: 6vh 4vw;
+
+    color: var(--color-quinary);
+
+    background-image: url(../img/motto/motto-bg.jpg);
+    @extend %background-styling;
+    background-position: 50% 35%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+
+    &__card {
+        padding: 3rem;
+        background-image: linear-gradient(
+            var(--color-tertiary-m),
+            var(--color-tertiary-m)
+        );
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        // max-width: 50rem;
+
+        &__title {
+            font-size: $font-size-medium;
+            font-weight: 300;
+        }
+
+        &__para {
+            font-size: $font-size-small;
+            font-weight: 100;
+        }
+
+        &__link {
+        }
+    }
 }
