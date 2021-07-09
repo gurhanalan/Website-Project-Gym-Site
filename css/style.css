@@ -290,6 +290,66 @@ i {
     .motto__card__para {
       font-size: calc(1.2rem + 0.5vw);
       font-weight: 100; }
+    .motto__card__link:link, .motto__card__link:visited {
+      padding: 1rem 2rem;
+      align-self: start;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out; }
+    .motto__card__link span {
+      display: inline-block;
+      position: absolute; }
+    .motto__card__link span:nth-child(1) {
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(90deg, transparent, var(--color-primary));
+      left: -100%;
+      top: 0;
+      transition: 0.5s;
+      transition-delay: 1s; }
+    .motto__card__link span:nth-child(2) {
+      width: 2px;
+      height: 100%;
+      background-image: linear-gradient(180deg, transparent, var(--color-primary));
+      right: 0;
+      top: -100%;
+      transition: 0.5s;
+      transition-delay: 0.75s; }
+    .motto__card__link span:nth-child(3) {
+      width: 100%;
+      height: 2px;
+      background-image: linear-gradient(270deg, transparent, var(--color-primary));
+      right: -100%;
+      bottom: 0;
+      transition: 0.5s;
+      transition-delay: 0.5s; }
+    .motto__card__link span:nth-child(4) {
+      width: 2px;
+      height: 100%;
+      background-image: linear-gradient(0deg, transparent, var(--color-primary));
+      left: 0;
+      bottom: -100%;
+      transition: 0.5s;
+      transition-delay: 0.25s; }
+    .motto__card__link:hover, .motto__card__link:active {
+      background-color: var(--color-primary);
+      transition-delay: 1s; }
+      .motto__card__link:hover span:nth-child(1), .motto__card__link:active span:nth-child(1) {
+        transform: translateX(200%);
+        transition-duration: 1s;
+        transition-delay: 0s; }
+      .motto__card__link:hover span:nth-child(2), .motto__card__link:active span:nth-child(2) {
+        transform: translateY(200%);
+        transition-duration: 1s;
+        transition-delay: 0.25s; }
+      .motto__card__link:hover span:nth-child(3), .motto__card__link:active span:nth-child(3) {
+        transform: translateX(-200%);
+        transition-duration: 1s;
+        transition-delay: 0.5s; }
+      .motto__card__link:hover span:nth-child(4), .motto__card__link:active span:nth-child(4) {
+        transform: translateY(-200%);
+        transition-duration: 1s;
+        transition-delay: 0.75s; }
 
 .features {
   grid-column: container-start / container-end;
