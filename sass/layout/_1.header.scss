@@ -1,25 +1,38 @@
 .header {
     grid-column: container-start / container-end;
 
+    @include respond(tab-port) {
+        position: fixed;
+    }
     &__checkbox {
         height: 4rem;
         width: 4rem;
         position: fixed;
         top: 2rem;
         right: 2rem;
-        z-index: 1;
+        cursor: pointer;
+        z-index: 30;
+        opacity: 0;
+        display: none;
+        @include respond(tab-port) {
+            display: initial;
+        }
     }
     // Hamburger Lines
     &__hamburger {
         height: 4rem;
         width: 4rem;
         background-color: royalblue;
-        display: grid;
-        place-items: center;
-
+        z-index: 20;
         position: fixed;
         top: 2rem;
         right: 2rem;
+        display: none;
+
+        @include respond(tab-port) {
+            display: grid;
+            place-items: center;
+        }
     }
 
     &__hamburger div {
@@ -28,6 +41,8 @@
         background-color: var(--color-quinary);
 
         position: relative;
+
+        transition: all 0.5s;
     }
 
     &__hamburger div::before,
@@ -37,22 +52,67 @@
         width: 100%;
         height: 100%;
         background-color: var(--color-quinary);
+        transition: all 0.8s;
     }
     &__hamburger div::before {
-        top: -1rem;
+        // top: -1rem;
+        // transition: top 0.5s, transform 0.5s 0.5s;
+
+        transform: translateY(-1rem);
     }
     &__hamburger div::after {
-        bottom: -1rem;
+        // bottom: -1rem;
+        // transition: bottom 0.5s, transform 0.5s 0.5s;
+        transform: translateY(1rem);
     }
 
+    // Hamburger checkbox
+    &__checkbox:checked ~ &__hamburger div {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__hamburger div::before {
+        // top: 0;
+        transform: translateY(0rem) rotateZ(225deg);
+        // transition: transform 0.5s, top 0.5s 0.5s;
+        // transition-property: transform, top;
+    }
+    &__checkbox:checked ~ &__hamburger div::after {
+        // bottom: 0;
+        transform: translateY(0rem) rotateZ(495deg);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        transform: translateX(0);
+    }
+
+    &__checkbox:checked ~ &__cover {
+        position: absolute;
+        background-color: var(--color-primary-m);
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+    }
     // Nav Bar
     &__nav {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-
+        background-color: var(--color-primary);
         overflow: hidden;
+        z-index: 10;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            padding: 2rem 5rem;
+            // align-items: center;
+            height: 100vh;
+            z-index: 10;
+            transform: translateX(-30rem);
+            transition: all 0.5s;
+        }
     }
+
     &__logo {
         height: 5rem;
         width: 5rem;
@@ -60,12 +120,20 @@
 
     &__links {
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
-    &__link {
+    &__link:link,
+    &__link:visited {
         display: inline-block;
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
+        font-size: 2rem;
+        line-height: 1;
 
         transform-style: preserve-3d;
         transition: all 0.5s;
