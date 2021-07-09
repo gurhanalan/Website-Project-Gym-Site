@@ -15,7 +15,7 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 1em = 16px
 
 */
-.showcase, .motto {
+.showcase, .motto, .features__card {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -353,7 +353,39 @@ i {
 
 .features {
   grid-column: container-start / container-end;
-  background-color: #664a1f; }
+  padding: 6vh 4vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 3rem; }
+  .features__card {
+    color: var(--color-quinary);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; }
+    .features__card--1 {
+      background-image: url("../img/features/features-1.jpg"); }
+    .features__card--2 {
+      background-image: url("../img/features/features-2.jpg"); }
+    .features__card--3 {
+      background-image: url("../img/features/features-3.jpg"); }
+    .features__card--4 {
+      background-image: url("../img/features/features-4.jpg"); }
+    .features__card--5 {
+      background-image: url("../img/features/features-5.jpg"); }
+    .features__card--6 {
+      background-image: url("../img/features/features-6.jpg"); }
+    .features__card--7 {
+      background-image: url("../img/features/features-7.jpg"); }
+    .features__card--8 {
+      background-image: url("../img/features/features-8.jpg"); }
+    .features__card--9 {
+      background-image: url("../img/features/features-9.jpg"); }
+    .features__card__title {
+      font-size: calc(1.5rem + 2vw);
+      font-weight: 300; }
+    .features__card__para {
+      font-size: calc(1.2rem + 0.5vw); }
 
 .trainers {
   grid-column: center-start / center-end;
