@@ -355,14 +355,14 @@ i {
   grid-column: container-start / container-end;
   padding: 6vh 4vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-  gap: 3rem; }
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); }
   .features__card {
     color: var(--color-quinary);
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem; }
+    gap: 5rem;
+    align-items: center; }
     .features__card--1 {
       background-image: url("../img/features/features-1.jpg"); }
     .features__card--2 {
@@ -383,9 +383,37 @@ i {
       background-image: url("../img/features/features-9.jpg"); }
     .features__card__title {
       font-size: calc(1.5rem + 2vw);
-      font-weight: 300; }
+      font-weight: 300;
+      text-align: center;
+      transition: all 0.3s;
+      width: 100%;
+      position: relative;
+      line-height: 1;
+      padding: 1rem 0;
+      z-index: 0;
+      overflow: hidden; }
+      .features__card__title::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-primary-m);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s; }
+    .features__card:hover .features__card__title::before {
+      transform: scaleX(1);
+      transform-origin: left; }
     .features__card__para {
-      font-size: calc(1.2rem + 0.5vw); }
+      font-size: calc(1.2rem + 0.5vw);
+      text-align: center;
+      background-color: var(--color-primary-m);
+      padding: 1rem 0; }
+    .features__card__link {
+      align-self: flex-start; }
 
 .trainers {
   grid-column: center-start / center-end;
