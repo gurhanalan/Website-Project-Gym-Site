@@ -416,19 +416,25 @@ i {
       align-self: flex-start; }
 
 .trainers {
-  grid-column: center-start / center-end;
-  background-color: var(--color-quaternary); }
+  grid-column: center-start / center-end; }
   .trainers__title {
     font-size: calc(1.5rem + 2vw);
     color: var(--color-quinary);
     font-weight: 500;
     background-color: var(--color-tertiary);
     text-align: center;
-    border-radius: 50rem 50rem 0rem 0rem; }
+    border-radius: 50rem 50rem 0rem 0rem;
+    margin-bottom: 4rem; }
+  .trainers__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+    place-items: center; }
   .trainers__card {
     height: 30rem;
     width: 30rem;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .trainers__card__img {
       height: 100%;
       width: 100%;
@@ -439,7 +445,6 @@ i {
       position: absolute;
       top: 20rem;
       left: 0;
-      z-index: 1;
       color: var(--color-quinary);
       transition: all 0.3s;
       opacity: 0; }
@@ -455,13 +460,13 @@ i {
 
 @keyframes text-move {
   0% {
-    transform: translate(-100%, -20rem);
+    transform: translate(-30rem, -20rem);
     opacity: 0; }
   33% {
-    transform: translate(50%, -20rem);
+    transform: translate(10rem, -20rem);
     opacity: 0.5; }
   66% {
-    transform: translate(50%, 0rem);
+    transform: translate(10rem, 0rem);
     opacity: 0.7; }
   100% {
     transform: translate(0, 0rem);
