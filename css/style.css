@@ -15,7 +15,7 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 1em = 16px
 
 */
-.showcase, .motto, .features__card {
+.showcase, .motto, .features__card, .clients {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -439,7 +439,8 @@ i {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: top; }
+      object-position: top;
+      z-index: -1; }
     .trainers__card__text {
       padding: 1rem 2rem;
       position: absolute;
@@ -449,9 +450,11 @@ i {
       transition: all 0.3s;
       opacity: 0; }
       .trainers__card__text--name {
-        font-size: 2rem; }
+        font-size: 2rem;
+        text-transform: uppercase; }
       .trainers__card__text--job {
-        font-size: 1.5rem; }
+        font-size: 1.5rem;
+        text-transform: uppercase; }
     .trainers__card:hover .trainers__card__img {
       filter: contrast(30%); }
     .trainers__card:hover .trainers__card__text {
@@ -478,7 +481,29 @@ i {
 
 .clients {
   grid-column: container-start / container-end;
-  background-color: cyan; }
+  padding: 6vh 4vw;
+  background-image: linear-gradient(var(--color-quaternary-m), var(--color-quaternary-m)), url(../img/clients/clients-bg.jpg); }
+  .clients__title {
+    font-size: calc(1.5rem + 2vw);
+    text-align: center;
+    margin-bottom: 5rem;
+    font-weight: 500;
+    color: var(--color-quinary); }
+  .clients__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4rem; }
+    .clients__logos__logo {
+      height: 15rem;
+      width: 25rem;
+      position: relative;
+      background-color: var(--color-quinary-m);
+      padding: 2rem 4rem;
+      border-radius: 5rem;
+      transition: transform 0.3s ease-in-out; }
+      .clients__logos__logo:hover {
+        transform: scale(1.1); }
 
 .register {
   grid-column: container-start / container-end;

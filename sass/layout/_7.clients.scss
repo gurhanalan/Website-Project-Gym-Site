@@ -1,4 +1,40 @@
 .clients {
     grid-column: container-start / container-end;
-    background-color: cyan;
+    padding: 6vh 4vw;
+
+    background-image: linear-gradient(
+            var(--color-quaternary-m),
+            var(--color-quaternary-m)
+        ),
+        url(../img/clients/clients-bg.jpg);
+
+    @extend %background-styling;
+
+    &__title {
+        font-size: $font-size-medium;
+        text-align: center;
+        margin-bottom: 5rem;
+        font-weight: 500;
+        color: var(--color-quinary);
+    }
+
+    &__logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 4rem;
+        &__logo {
+            height: 15rem;
+            width: 25rem;
+            position: relative;
+            background-color: var(--color-quinary-m);
+            padding: 2rem 4rem;
+            border-radius: 5rem;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
