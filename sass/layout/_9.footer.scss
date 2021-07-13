@@ -1,4 +1,29 @@
 .footer {
     grid-column: container-start / container-end;
     background-color: rgb(138, 153, 51);
+    padding: 6vh 4vw;
+    background-image: linear-gradient(
+            var(--color-tertiary-m),
+            var(--color-tertiary-m)
+        ),
+        url(../img/footer/footer-bg.jpg);
+    @extend %background-styling;
+
+    &__lists {
+    }
+
+    &__list {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &__title {
+            color: var(--color-quinary);
+            font-size: $font-size-small;
+        }
+        &__link {
+            font-weight: 200;
+            font-size: $font-size-small;
+        }
+    }
 }
