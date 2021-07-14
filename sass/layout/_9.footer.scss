@@ -20,10 +20,25 @@
         &__title {
             color: var(--color-quinary);
             font-size: $font-size-small;
+            font-weight: 400;
         }
         &__link {
             font-weight: 200;
             font-size: $font-size-small;
+        }
+
+        &__para {
+            color: var(--color-quinary);
+            font-weight: 200;
+            font-size: $font-size-small;
+        }
+
+        input {
+            align-self: flex-start;
+            width: 20rem;
+            height: 3rem;
+            background-color: transparent;
+            color: var(--color-quinary);
         }
     }
 }

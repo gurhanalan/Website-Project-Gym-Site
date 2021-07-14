@@ -521,7 +521,18 @@ i {
     gap: 1rem; }
     .footer__list__title {
       color: var(--color-quinary);
-      font-size: calc(1.2rem + 0.5vw); }
+      font-size: calc(1.2rem + 0.5vw);
+      font-weight: 400; }
     .footer__list__link {
       font-weight: 200;
       font-size: calc(1.2rem + 0.5vw); }
+    .footer__list__para {
+      color: var(--color-quinary);
+      font-weight: 200;
+      font-size: calc(1.2rem + 0.5vw); }
+    .footer__list input {
+      align-self: flex-start;
+      width: 20rem;
+      height: 3rem;
+      background-color: transparent;
+      color: var(--color-quinary); }
