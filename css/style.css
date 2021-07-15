@@ -514,10 +514,15 @@ i {
   background-color: #8a9933;
   padding: 6vh 4vw;
   background-image: linear-gradient(var(--color-tertiary-m), var(--color-tertiary-m)), url(../img/footer/footer-bg.jpg); }
+  .footer__lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    place-items: center; }
   .footer__list {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    width: 25rem;
     gap: 1rem; }
     .footer__list__title {
       color: var(--color-quinary);
@@ -533,6 +538,15 @@ i {
     .footer__list input {
       align-self: flex-start;
       width: 20rem;
-      height: 3rem;
+      padding: 1rem;
       background-color: transparent;
-      color: var(--color-quinary); }
+      color: var(--color-quinary);
+      font-family: inherit;
+      font-size: 1.4rem;
+      border: 1px solid var(--color-quinary);
+      border-radius: 3px; }
+      .footer__list input[type="submit"] {
+        transition: all 0.3s; }
+        .footer__list input[type="submit"]:hover {
+          background-color: var(--color-quinary);
+          color: var(--color-tertiary-m); }
