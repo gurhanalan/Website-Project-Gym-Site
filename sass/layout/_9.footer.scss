@@ -8,12 +8,15 @@
         ),
         url(../img/footer/footer-bg.jpg);
     @extend %background-styling;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
     &__lists {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        place-items: center;
-        // justify-items: center;
+        // place-items: center;
+        justify-items: center;
     }
 
     &__list {
@@ -58,6 +61,24 @@
                     color: var(--color-tertiary-m);
                 }
             }
+        }
+    }
+
+    // LOGO
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        align-self: center;
+        img {
+            height: 5rem;
+            width: 5rem;
+        }
+        h3 {
+            color: var(--color-quinary);
+            font-size: $font-size-small;
+            font-weight: 400;
+            letter-spacing: 3px;
         }
     }
 }
