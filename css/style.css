@@ -566,3 +566,17 @@ i {
       font-size: calc(1.2rem + 0.5vw);
       font-weight: 400;
       letter-spacing: 3px; }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem; }
+    .footer__social__call {
+      display: flex;
+      gap: 2rem;
+      align-items: center; }
+    .footer__social__icons {
+      display: flex;
+      gap: 2rem;
+      align-items: center; }

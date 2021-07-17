@@ -81,4 +81,27 @@
             letter-spacing: 3px;
         }
     }
+
+    // Social
+
+    &__social {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        &__call {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            // margin-right: auto;
+        }
+
+        &__icons {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
 }
