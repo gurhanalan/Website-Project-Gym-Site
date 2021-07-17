@@ -1,11 +1,3 @@
-@mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
 @mixin center {
     position: absolute;
     top: 50%;
@@ -17,6 +9,11 @@
 // Ex 1
 @mixin respond-phone {
     @media (max-width: 600px) {
+        @content;
+    }
+}
+@mixin respond-px($px) {
+    @media (max-width: $px) {
         @content;
     }
 }
