@@ -23,8 +23,8 @@
         height: 4rem;
         width: 4rem;
         background-color: royalblue;
-        z-index: 20;
         position: fixed;
+        z-index: 20;
         top: 2rem;
         right: 2rem;
         display: none;
@@ -87,6 +87,7 @@
         background-color: var(--color-primary-m);
         height: 100vh;
         width: 100vw;
+        // z-index: 5;
     }
 
     &__checkbox:checked ~ &__nav {
@@ -96,6 +97,7 @@
     // Nav Bar
     &__nav {
         display: flex;
+
         justify-content: space-evenly;
         align-items: center;
         background-color: var(--color-primary);

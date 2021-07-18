@@ -51,6 +51,11 @@
         opacity: 0.4;
         transition: opacity 0.3s;
 
+        @include respond(phone) {
+            height: 10rem;
+            width: 10rem;
+        }
+
         &--active {
             opacity: 1;
         }

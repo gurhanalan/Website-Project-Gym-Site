@@ -96,8 +96,8 @@ i {
     height: 4rem;
     width: 4rem;
     background-color: royalblue;
-    z-index: 20;
     position: fixed;
+    z-index: 20;
     top: 2rem;
     right: 2rem;
     display: none; }
@@ -435,13 +435,13 @@ i {
     height: 30rem;
     width: 30rem;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 1; }
     .trainers__card__img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-      object-position: top;
-      z-index: -1; }
+      object-position: top; }
     .trainers__card__text {
       padding: 1rem 2rem;
       position: absolute;
@@ -512,6 +512,10 @@ i {
     cursor: pointer;
     opacity: 0.4;
     transition: opacity 0.3s; }
+    @media only screen and (max-width: 37.5em) {
+      .testimonials__pic {
+        height: 10rem;
+        width: 10rem; } }
     .testimonials__pic--active {
       opacity: 1; }
 
@@ -533,7 +537,6 @@ i {
     .clients__logos__logo {
       height: 15rem;
       width: 25rem;
-      position: relative;
       background-color: var(--color-quinary-m);
       padding: 2rem 4rem;
       border-radius: 5rem;
