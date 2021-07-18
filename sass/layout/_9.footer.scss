@@ -113,7 +113,19 @@
         &__icon {
             border: 2px solid var(--color-quinary);
             border-radius: 100%;
-            padding: 1rem;
+            height: 5rem;
+            width: 5rem;
+            display: grid;
+            place-items: center;
+            transition: all 0.3s;
+
+            i {
+                font-size: 3rem;
+            }
+
+            &:hover {
+                background-color: var(--color-quinary);
+            }
         }
     }
 }

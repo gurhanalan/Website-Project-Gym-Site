@@ -1,6 +1,7 @@
 .trainers {
     grid-column: center-start / center-end;
     // background-color: var(--color-quaternary);
+    padding: 6vh 0;
 
     &__title {
         font-size: $font-size-medium;
