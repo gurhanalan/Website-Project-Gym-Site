@@ -1,4 +1,75 @@
 .register {
     grid-column: container-start / container-end;
     background-color: rebeccapurple;
+    padding: 20vh 4vw;
+    background-image: url(../img/register/register-bg.jpg);
+    @extend %background-styling;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+
+    &__stages {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    &__stage {
+        height: 5rem;
+        width: 5rem;
+        background-color: var(--color-tertiary-m);
+        border-radius: 100%;
+        display: grid;
+        place-items: center;
+        color: var(--color-quinary);
+        font-size: 1.4rem;
+    }
+
+    // Form
+    &__form {
+        &--name {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            label {
+                color: var(--color-quinary);
+                font-size: 1.7rem;
+                letter-spacing: 2px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+
+                input {
+                    background-color: var(--color-quinary-m);
+                    border: none;
+                    padding: 1rem;
+                    outline: none;
+                    color: var(--color-quinary);
+                    width: 25rem;
+                    &:focus {
+                        background-color: var(--color-secondary-m);
+                    }
+                }
+            }
+        }
+
+        &--button {
+            background-color: var(--color-tertiary-m);
+            border: none;
+            width: 25rem;
+            padding: 1rem 0;
+            color: var(--color-quinary);
+            font-size: 1.7rem;
+            letter-spacing: 2px;
+            margin-top: 3rem;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: var(--color-primary-m);
+            }
+        }
+    }
 }
