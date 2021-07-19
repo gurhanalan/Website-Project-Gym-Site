@@ -78,7 +78,8 @@ i {
   grid-column: container-start / container-end; }
   @media only screen and (max-width: 56.25em) {
     .header {
-      position: fixed; } }
+      position: fixed;
+      z-index: 10; } }
   .header__checkbox {
     height: 4rem;
     width: 4rem;
@@ -435,8 +436,7 @@ i {
     height: 30rem;
     width: 30rem;
     position: relative;
-    overflow: hidden;
-    z-index: 1; }
+    overflow: hidden; }
     .trainers__card__img {
       height: 100%;
       width: 100%;

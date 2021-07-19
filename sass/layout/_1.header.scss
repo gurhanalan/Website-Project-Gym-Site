@@ -3,6 +3,7 @@
 
     @include respond(tab-port) {
         position: fixed;
+        z-index: 10;
     }
     &__checkbox {
         height: 4rem;
